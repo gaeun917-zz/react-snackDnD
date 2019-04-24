@@ -8,15 +8,20 @@ import Snack from './Snack';
 // Container: all drag and drop interaction happens
 class Container extends Component {
     render() {
+        const snacks = ['Chips','Cupcake', 'Donut', 'Doritos','Popcorn'];
+
+        const snackArr = snacks.map((snack, i)=>{
+          return <Snack key={i} name={snack}/>
+        });
+
         return (
             <div>
-                <Snack name='Chips'/>
-                <Snack name='Cupcake'/>
-                <Snack name='Donut'/>
-                <Snack name='Doritos'/>
-                <Snack name='Popcorn'/>
-                <ShoppingCart/>
-            </div>);
+                <div className='snack_section'>
+                    {snackArr}
+                </div>
+                <ShoppingCart />
+            </div>
+        );
     }
 }
 

@@ -1,10 +1,11 @@
-import React, {PropTypes, Component} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {DropTarget} from 'react-dnd';
 
-// ShoppingCart DND Spec
-//    "A plain object implementing the drop target specification"
-//
-//  - DropTarget Methods (All optional)
+// 1. DropTarget
+
+
+// 1.1 Drop Spec
 //    - drop: Called when a compatible item is dropped.
 //    - hover: Called when an item is hovered over the component.
 //    - canDrop: Use it to specify whether the drop target is able to accept
@@ -17,8 +18,9 @@ const ShoppingCartSpec = {
     }
 };
 
-
-// ShoppingCart DropTarget - collect
+// 1.2. Drop collect
+// collect is prop for ShoppingCart Component
+//
 //  - connect: An instance of DropTargetConnector.
 //             You use it to assign the drop target role to a DOM node.
 //
